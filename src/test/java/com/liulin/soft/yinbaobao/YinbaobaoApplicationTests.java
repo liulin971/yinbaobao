@@ -8,6 +8,7 @@ class YinbaobaoApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("测试提交");
     }
 
 }
