@@ -3,6 +3,8 @@ package com.liulin.soft.yinbaobao.config;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -22,6 +24,8 @@ public class DrudConfig {
     public DataSource dataSource(){
         return new DruidDataSource();
     }
+
+    Logger logger = LoggerFactory.getLogger(getClass());
 
 
     //配置druid的监控
@@ -48,6 +52,8 @@ public class DrudConfig {
         map.put("exclusions","*.js,*.css,/druid/*");
         bean.setInitParameters(map);
         bean.setUrlPatterns(Arrays.asList("/*"));
+
+        logger.debug("测试启动");
 
         return bean;
 

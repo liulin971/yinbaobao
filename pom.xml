@@ -18,6 +18,26 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <!-- 配置yml的启动 -->
+    <profiles>
+        <profile>
+            <id>bjb</id>
+            <activation>
+                <!--默认激活-->
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <spring.profiles.active>bjb</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>ts</id>
+            <properties>
+                <spring.profiles.active>ts</spring.profiles.active>
+            </properties>
+        </profile>
+    </profiles>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
