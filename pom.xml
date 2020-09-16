@@ -22,16 +22,20 @@
     <profiles>
         <profile>
             <id>bjb</id>
-            <activation>
-                <!--默认激活-->
-                <activeByDefault>true</activeByDefault>
-            </activation>
+<!--            <activation>-->
+<!--                &lt;!&ndash;默认激活&ndash;&gt;-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--            </activation>-->
             <properties>
                 <spring.profiles.active>bjb</spring.profiles.active>
             </properties>
         </profile>
         <profile>
             <id>ts</id>
+            <activation>
+                <!--默认激活-->
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <spring.profiles.active>ts</spring.profiles.active>
             </properties>
@@ -58,6 +62,17 @@
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
             <version>3.5.1</version>
+        </dependency>
+        <!-- 引入rebushu crtl+f9 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- 引入监控 crtl+f9 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <!-- bootstrap -->
         <dependency>
