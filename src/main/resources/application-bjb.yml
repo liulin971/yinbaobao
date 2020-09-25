@@ -1,4 +1,5 @@
 #配置数据库和引入druid数据源
+
 spring:
   datasource:
     username: root
@@ -27,3 +28,6 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+#端口8081
+server:
+  port: 8081
